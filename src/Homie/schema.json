@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "系统": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "日期": {
+          "default": "2026/07/08",
+          "type": "string"
+        },
+        "时间段": {
+          "default": "下午",
+          "type": "string"
+        },
+        "当前场景": {
+          "default": "合租公寓",
+          "type": "string"
+        }
+      }
+    },
+    "Jake": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "关系阶段": {
+          "default": "重逢期",
+          "type": "string",
+          "enum": [
+            "重逢期",
+            "挣扎期",
+            "面对期"
+          ]
+        },
+        "觉察度": {
+          "default": 0,
+          "type": "number"
+        },
+        "冷热状态": {
+          "default": "正常",
+          "type": "string",
+          "enum": [
+            "热",
+            "正常",
+            "冷"
+          ]
+        },
+        "对user的依赖度": {
+          "default": 10,
+          "type": "number"
+        }
+      }
+    },
+    "user": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "疲惫值": {
+          "default": 0,
+          "type": "number"
+        },
+        "离开决心": {
+          "default": 0,
+          "type": "number"
+        }
+      }
+    }
+  }
+}

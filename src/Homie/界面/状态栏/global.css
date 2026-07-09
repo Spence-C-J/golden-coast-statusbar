@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 功能语义命名 */
+  --c-primary: #e8a030;          /* Jake 主色：琥珀金 */
+  --c-accent: #7c6ad8;           /* user 强调：紫罗兰 */
+  --c-surface: #1e1e2e;          /* 卡片底色 */
+  --c-surface-light: #2a2a3e;    /* 次级卡片 */
+  --c-background: #15151f;       /* 背景深色 */
+  --c-text: #d4d4e0;             /* 主文字 */
+  --c-text-muted: #7a7a92;       /* 次要文字 */
+  --c-border: #2a2a3e;           /* 边框 */
+  --c-danger: #e74c3c;           /* 危险色 */
+
+  /* 关系阶段色 */
+  --c-stage-reunion: #e8a030;    /* 重逢期：琥珀金 */
+  --c-stage-struggle: #e74c3c;   /* 挣扎期：红 */
+  --c-stage-face: #4ecdc4;       /* 面对期：青 */
+
+  /* 冷热状态色 */
+  --c-heat-hot: #ff6b6b;         /* 热 */
+  --c-heat-normal: #7a7a92;      /* 正常 */
+  --c-heat-cold: #4a9eff;        /* 冷 */
+
+  --font-sans: 'Inter', -apple-system, 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
