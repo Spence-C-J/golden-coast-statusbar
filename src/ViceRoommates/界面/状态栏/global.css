@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* GTA Vice City 霓虹配色 - 功能语义命名 */
+  --c-primary: #ff6b9d;       /* 主色：霓虹粉 */
+  --c-accent: #4ecdc4;        /* 强调：青色 */
+  --c-warning: #ffd93d;       /* 警告/金钱：金黄 */
+  --c-surface: #1e1e2e;       /* 卡片底色 */
+  --c-surface-light: #2a2a3e; /* 次级卡片 */
+  --c-background: #16162a;    /* 背景深色 */
+  --c-text: #e8e8e8;          /* 主文字 */
+  --c-text-muted: #8888aa;    /* 次要文字 */
+  --c-border: #3a3a5c;        /* 边框 */
+  --c-danger: #e74c3c;        /* 危险色 */
+
+  /* 阶段色 */
+  --c-stage-roommate: #8888aa;   /* 室友：灰蓝 */
+  --c-stage-friend: #4ecdc4;     /* 朋友：青色 */
+  --c-stage-ambiguous: #ff6b9d;  /* 暧昧：粉色 */
+  --c-stage-lover: #ff4d6d;      /* 恋人：深粉 */
+
+  --font-sans: 'Inter', -apple-system, 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}

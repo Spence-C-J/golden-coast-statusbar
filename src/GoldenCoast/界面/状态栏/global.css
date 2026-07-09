@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 海岸夏日配色 */
+  --c-primary: #1a5f7a;       /* 深海蓝：标题、主色 */
+  --c-accent: #f4a261;        /* 日落橙：高亮、进度条 */
+  --c-surface: #f8f9fa;       /* 浅色背景 */
+  --c-surface-alt: #e9ecef;   /* 次级背景 */
+  --c-text: #2d3436;          /* 主文字 */
+  --c-text-muted: #6c757d;    /* 次要文字 */
+  --c-border: #dee2e6;        /* 边框 */
+  --c-success: #2a9d8f;       /* 信任度绿 */
+  --c-danger: #e76f51;        /* 警告色 */
+
+  --font-main: -apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}

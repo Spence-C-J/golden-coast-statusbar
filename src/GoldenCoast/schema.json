@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "系统": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "日期": {
+          "default": "2026/06/21",
+          "type": "string"
+        },
+        "时间段": {
+          "default": "下午",
+          "type": "string"
+        },
+        "当前位置": {
+          "default": "金景高地",
+          "type": "string"
+        }
+      }
+    },
+    "Nathan": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "好感度": {
+          "default": 0,
+          "type": "number"
+        },
+        "信任度": {
+          "default": 0,
+          "type": "number"
+        }
+      }
+    },
+    "玩家": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "金钱": {
+          "default": 3000,
+          "type": "number"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "系统": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "日期": {
+          "default": "2026/07/01",
+          "type": "string"
+        },
+        "时间段": {
+          "default": "早晨",
+          "type": "string",
+          "enum": [
+            "早晨",
+            "下午",
+            "傍晚",
+            "夜晚",
+            "深夜"
+          ]
+        },
+        "当前位置": {
+          "default": "合租公寓",
+          "type": "string",
+          "enum": [
+            "合租公寓",
+            "街区周边"
+          ]
+        }
+      }
+    },
+    "Jason": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "好感度": {
+          "default": 0,
+          "type": "number"
+        },
+        "信任度": {
+          "default": 0,
+          "type": "number"
+        },
+        "关系阶段": {
+          "default": "室友",
+          "type": "string",
+          "enum": [
+            "室友",
+            "朋友",
+            "暧昧",
+            "恋人"
+          ]
+        }
+      }
+    },
+    "Ethan": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "金钱": {
+          "default": 5000,
+          "type": "number"
+        }
+      }
+    }
+  }
+}
