@@ -17,6 +17,10 @@
         "当前场景": {
           "default": "合租公寓",
           "type": "string"
+        },
+        "今日安排": {
+          "default": "",
+          "type": "string"
         }
       }
     },
@@ -49,6 +53,20 @@
         "对user的依赖度": {
           "default": 10,
           "type": "number"
+        },
+        "订阅数": {
+          "default": 480000,
+          "type": "number"
+        },
+        "直播状态": {
+          "default": "今日不播",
+          "type": "string",
+          "enum": [
+            "直播中",
+            "未开播",
+            "已下播",
+            "今日不播"
+          ]
         }
       }
     },
@@ -63,7 +81,81 @@
         "离开决心": {
           "default": 0,
           "type": "number"
+        },
+        "SNS粉丝数": {
+          "default": 2300,
+          "type": "number"
+        },
+        "委托": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "客户": {
+                "default": "",
+                "type": "string"
+              },
+              "内容": {
+                "default": "",
+                "type": "string"
+              },
+              "类型": {
+                "default": "个人委托",
+                "type": "string",
+                "enum": [
+                  "商稿",
+                  "个人委托",
+                  "Jake直播间"
+                ]
+              },
+              "酬劳": {
+                "default": 0,
+                "type": "number"
+              },
+              "截稿日": {
+                "default": "",
+                "type": "string"
+              },
+              "状态": {
+                "default": "进行中",
+                "type": "string",
+                "enum": [
+                  "进行中",
+                  "已完成",
+                  "已逾期",
+                  "已取消"
+                ]
+              }
+            }
+          }
         }
+      }
+    },
+    "日程": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "本周特殊事项": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UID计数器": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
       }
     }
   }

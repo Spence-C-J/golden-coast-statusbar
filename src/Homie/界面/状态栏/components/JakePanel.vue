@@ -10,6 +10,14 @@
         <span class="heat-icon">{{ heatIcon }}</span>
         {{ store.data.Jake.冷热状态 }}
       </span>
+      <span class="live-tag" :class="{ live: store.data.Jake.直播状态 === '直播中' }">
+        <span class="live-dot" v-if="store.data.Jake.直播状态 === '直播中'"></span>{{ store.data.Jake.直播状态 }}
+      </span>
+    </div>
+
+    <div class="live-row">
+      <span class="live-icon">📺</span>
+      <span class="live-sub">{{ subCount }}</span>
     </div>
 
     <div class="stats-area">
@@ -58,6 +66,13 @@ const awarenessColor = computed(() => {
   if (v < 30) return 'var(--c-stage-reunion)';
   if (v < 60) return 'var(--c-stage-struggle)';
   return 'var(--c-stage-face)';
+});
+
+const subCount = computed(() => {
+  const n = store.data.Jake.订阅数;
+  if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + '万';
+  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return String(n);
 });
 </script>
 
@@ -111,7 +126,60 @@ const awarenessColor = computed(() => {
 }
 
 .tag-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  color: var(--c-text-muted);
+  max-width: 55%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.live-tag.live {
+  color: var(--c-live);
+  border-color: var(--c-live);
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-live);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: 0.3; }
+}
+
+.live-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   margin-bottom: 10px;
+}
+
+.live-icon {
+  font-size: 0.8rem;
+}
+
+.live-sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
 }
 
 .heat-tag {
